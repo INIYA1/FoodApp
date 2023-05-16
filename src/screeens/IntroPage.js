@@ -335,17 +335,17 @@
 //     marginBottom: 12,
 //   },
 // });
-import React from 'react';
-import {View,Text} from 'react-native';
+// import React from 'react';
+// import {View,Text} from 'react-native';
 
-const IntroPage =()=>{
-  return(
-    <View style={{flex:1,backgroundColor:"white"}}>
-    <View style={{height:143,width:143,backgroundColor:'#5EC6CD'}}>
+// const IntroPage =()=>{
+//   return(
+//     <View style={{flex:1,backgroundColor:"white"}}>
+//     <View style={{height:143,width:143,backgroundColor:'#5EC6CD'}}>
 
-    </View>
-      <Text> HAI  </Text>
-    </View>
-  )
-}
-export default IntroPage;
+//     </View>
+//       <Text> HAI  </Text>
+//     </View>
+//   )
+// }
+// export default IntroPage;

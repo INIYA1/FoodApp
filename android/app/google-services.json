@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "611611911675",
+    "firebase_url": "https://auth--app-b6b33-default-rtdb.firebaseio.com",
+    "project_id": "auth--app-b6b33",
+    "storage_bucket": "auth--app-b6b33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611611911675:android:cec4a54b6da31541b5175e",
+        "android_client_info": {
+          "package_name": "com.foodiaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611611911675-7tsdhm2d2vtjgn5jg0k0qvd3i4sskh26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdoQfdeKIL2Kg_tTz96AB-by8Ee1H_yic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611611911675-7tsdhm2d2vtjgn5jg0k0qvd3i4sskh26.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "611611911675-9foroormrqro0dtv6hpfo1uqhp0n9oub.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.foodiaapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

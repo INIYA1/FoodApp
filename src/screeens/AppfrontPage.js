@@ -1,6 +1,7 @@
 import { View, Text, SafeAreaView, Image, StyleSheet, ImageBackground, TextInput, Touchable, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react';
 import Icons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function AppfrontPage({ navigation }) {
@@ -66,10 +67,9 @@ const handleLogin =()=>{
 
   return (
 
-    <View style={{ flex: 1 }}>
-      <ImageBackground source={{ uri: 'https://i.pinimg.com/originals/55/e0/99/55e0990c56a823904b78850f7daa77ca.jpg' }}
-        style={{ flex: 1 }}>
-        <Text style={styles.text1} onPress={() => navigation.navigate('Appfrontpage')}>🍹 Foodia App 🥧</Text>
+    <View style={{ flex: 1,backgroundColor:'white' }}>
+       <ImageBackground source={{ uri: 'https://img.freepik.com/free-photo/blurred-dinning_1203-289.jpg?w=740&t=st=1683098093~exp=1683098693~hmac=fae7c197c6605a04e54baa411dbc2641659b11242f0d577c9b21dfadc599ff7e' }} style={{ flex: 1 }}> 
+         <Text style={styles.text1} onPress={() => navigation.navigate('Appfrontpage')}>🍹 Foodia App 🥧</Text> 
 
         <View style={styles.text2} >
           <View >
@@ -79,17 +79,20 @@ const handleLogin =()=>{
             placeholder='Email'
             value={email}
             onChangeText={(text)=>handleCheckEmail(text)}
-            placeholderTextColor='black' >
+            placeholderTextColor='black' 
+            >
 
           </TextInput>
         </View>
-        {checkvalidEmail ? <Text style={styles.warning}>undefined mail</Text> : <Text>
+         {checkvalidEmail ? <Text style={styles.warning}>undefined mail</Text> : <Text>
 
-        </Text>}
+        </Text>} 
         <View style={styles.text3} >
         <View >
-        <TouchableOpacity onPress={()=>setSeePassword(!seePassword)}>
-            <Icons name={seePassword ? 'eye-off' :'eye'} size={25} color={'black'} margin={10} />
+        <TouchableOpacity 
+        onPress={()=>setSeePassword(!seePassword)}
+        >
+            <Icons name='eye-off'  size={25} color={'black'} margin={10} />
             </TouchableOpacity>
           </View>
           <TextInput 
@@ -100,24 +103,35 @@ const handleLogin =()=>{
             placeholderTextColor='black' />
         </View>
        
-
+ 
 { email == '' || password =='' || checkvalidEmail == true ?
 <TouchableOpacity 
 disabled
  style={styles.btnstyle} onPress={handleLogin}>
           
-            <Text style={{ color: 'white', margin: 20, fontSize: 20, fontWeight: '800' }}>SUBMIT</Text>
+            <Text style={{ color: 'white', fontSize: 20, fontWeight: '800' }}>SIGN IN</Text>
           </TouchableOpacity>
-:
-  <TouchableOpacity
+: 
+  <TouchableOpacity onPress={handleLogin} style={styles.btnstyle}> 
+      <Text style={{ color: 'white', fontSize: 20, fontWeight: '800' ,}}>SIGN IN</Text>
+          </TouchableOpacity>
+ } 
+          <View style={styles.btnstyle1}>
+          <Icons name="md-logo-google" size={25} color="red" marginRight={30}  />
+          <Text style={{color:'red',fontSize:18}} borderLeftWidth= {1}>      Sign In With Google</Text>
+            
+          </View>
+          <View style={styles.btnstyle2}>
+          <Icon name="facebook" size={25} color="blue" marginRight={30}  />
+          <Text style={{color:'blue',fontSize:18}} borderLeftWidth= {1}>     Sign In With Facebook</Text>
+            
+          </View>
 
- style={styles.btnstyle} onPress={handleLogin}>
-          
-            <Text style={{ color: 'white', margin: 20, fontSize: 20, fontWeight: '800' }}>SUBMIT</Text>
-          </TouchableOpacity>}
 
          
       </ImageBackground>
+
+  
     </View>
   )
 }
@@ -125,16 +139,16 @@ disabled
 
 const styles = StyleSheet.create({
   text1: {
-    fontSize: 50,
+    fontSize: 30,
     fontFamily: 'cursive',
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     alignSelf: 'center',
-    margin: 30,
-    textDecorationLine: "underline",
+    margin: 20,
+    // textDecorationLine: "underline",
   },
   text2: {
-    backgroundColor: 'white',
+    backgroundColor: '#D3D3D3',
     height: 50,
     width: "80%",
     borderRadius: 10,
@@ -152,29 +166,61 @@ const styles = StyleSheet.create({
     // color:'red'
   },
   text3: {
-    backgroundColor: 'white',
+    backgroundColor: '#D3D3D3',
   
     height: 50,
     width: "80%",
     borderRadius: 10,
     alignItems: 'center',
-    textDecorationLine: 'underline',
+    // textDecorationLine: 'underline',
     marginTop: 20,
     marginLeft: 50,
-    marginBottom: 300,
+    marginBottom: 150,
     flexDirection: 'row',
     fontSize: 18,
   },
   btnstyle: {
-    backgroundColor: 'black',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
     color: 'white',
     width: '80%',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    borderRadius: 50,
-    opacity: 0.8
+    borderRadius: 10,
+    // opacity: 0.8,
+    height:60,
+    // margin:10
+  
 
+  },
+  btnstyle1: {
+    flexDirection:'row',
+    backgroundColor: 'rgba(255, 170, 170, 0.3)',
+    color: 'white',
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderRadius: 10,
+    // opacity: 0.8,
+    height:60,
+    marginTop:100,
+    
+  },
+  btnstyle2: {
+    flexDirection:'row',
+    backgroundColor: 'rgba(20, 174, 255 , 0.2)',
+    // color: 'white',
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderRadius: 10,
+    // opacity: 0.8,
+    height:60,
+    marginTop:50
+    
+    
   },
 warning:{
   color:'red',
@@ -187,3 +233,16 @@ warning:{
 
   
 })
+
+
+
+// import { View, Text } from 'react-native'
+// import React from 'react'
+
+// export default function AppfrontPage() {
+//   return (
+//     <View>
+//       <Text>AppfrontPage</Text>
+//     </View>
+//   )
+// }

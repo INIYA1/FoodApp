@@ -91,7 +91,7 @@ const SigninScreen = ({ navigation }) => {
         <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
             <ScrollView vertical showsVerticalScrollIndicator={false}>
                 <View style={{ marginLeft: 10, marginTop: 20, justifyContent: "space-between", flexDirection: "row" }}>
-                <TouchableOpacity onPress={()=>navigation.navigate("API")}>
+                <TouchableOpacity onPress={()=>navigation.navigate("fireBase")}>
                     <Icon name="apps" size={30} />
                     </TouchableOpacity>
                     <View style={{ marginLeft: 270, }}>
